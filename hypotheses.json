@@ -1,11 +1,99 @@
 [
   {
-    "id": "1",
-    "hypothesis": "A large-scale synthetic citizen jury composed of AI agents trained on diverse moral frameworks can generate meaningful estimates of potential public consensus on policy issues that correlate significantly with real-world deliberative outcomes."
+    "id": "H1a",
+    "hypothesis": "AI agents trained to embody distinct ethical frameworks can generate morally coherent arguments that are philosophically indistinguishable from human arguments representing the same frameworks when evaluated by expert philosophers",
+    "null_hypothesis": "AI-generated moral arguments will be significantly distinguishable from human-generated arguments representing equivalent ethical frameworks when evaluated by expert philosophers",
+    "alternative_hypothesis": "AI agents can authentically embody moral frameworks with sufficient fidelity to pass philosophical evaluation",
+    "type": "authenticity",
+    "domain": "moral_reasoning",
+    "testable": true,
+    "falsification_criteria": [
+      "Expert philosophers can correctly identify AI vs. human arguments >70% of the time",
+      "AI arguments show systematic logical inconsistencies within frameworks",
+      "AI arguments fail to demonstrate contextual moral sensitivity"
+    ],
+    "methodology": "Blind evaluation by expert philosophers with formal consistency checks",
+    "variables": {
+      "independent": "AI vs. human argument source",
+      "dependent": "Philosophical evaluation scores and distinguishability rates",
+      "control": "Ethical framework consistency"
+    }
   },
   {
-    "id": "example-1",
-    "hypothesis": "This is an example hypothesis that demonstrates the expected format.",
-    "_isExample": true
+    "id": "H2a",
+    "hypothesis": "Large-scale synthetic citizen juries (n>1000 agents) will demonstrate emergent moral consensus patterns that correlate significantly (r>0.7) with outcomes from matched human citizen juries on equivalent moral dilemmas",
+    "null_hypothesis": "There is no significant correlation between synthetic and human citizen jury outcomes on moral policy questions",
+    "alternative_hypothesis": "Synthetic deliberation produces consensus patterns that approximate human deliberative democracy outcomes",
+    "type": "consensus_formation",
+    "domain": "deliberative_democracy",
+    "testable": true,
+    "falsification_criteria": [
+      "Correlation coefficient between synthetic and human jury outcomes <0.5",
+      "Synthetic juries show systematic bias toward particular ethical frameworks",
+      "Consensus formation patterns follow algorithmic rather than deliberative logic"
+    ],
+    "methodology": "Parallel deliberation with matched human control groups and correlation analysis",
+    "variables": {
+      "independent": "Synthetic vs. human jury composition",
+      "dependent": "Consensus outcomes and decision patterns",
+      "control": "Moral dilemma complexity and framing"
+    }
+  },
+  {
+    "id": "H3a",
+    "hypothesis": "Synthetic citizen juries reveal moral reasoning patterns and consensus dynamics at population scales (n>10,000) that are inaccessible through traditional deliberative methods, providing novel insights into collective moral judgment",
+    "null_hypothesis": "Large-scale synthetic deliberation provides no additional insights beyond those available from smaller human deliberative groups",
+    "alternative_hypothesis": "Population-scale synthetic deliberation reveals emergent properties of moral reasoning not observable in smaller groups",
+    "type": "scale_effects",
+    "domain": "collective_intelligence",
+    "testable": true,
+    "falsification_criteria": [
+      "Large-scale patterns are reproducible in smaller synthetic groups",
+      "Patterns are artifacts of computational processing rather than genuine moral phenomena",
+      "Scaling degrades rather than enhances deliberative quality"
+    ],
+    "methodology": "Multi-scale analysis with pattern recognition and emergent property identification",
+    "variables": {
+      "independent": "Group size (small, medium, large scale)",
+      "dependent": "Emergent patterns and consensus dynamics",
+      "control": "Moral dilemma complexity and agent framework distribution"
+    }
+  },
+  {
+    "id": "H4a",
+    "hypothesis": "Synthetic citizen juries function as effective democratic enhancement tools that increase the quality and reach of public deliberation without displacing human agency in democratic decision-making",
+    "null_hypothesis": "Synthetic citizen juries either fail to enhance democratic processes or actively undermine human democratic participation",
+    "alternative_hypothesis": "Synthetic deliberation enhances democratic capacity while preserving human sovereignty over moral and political decisions",
+    "type": "democratic_integration",
+    "domain": "political_science",
+    "testable": true,
+    "falsification_criteria": [
+      "Public acceptance of synthetic jury recommendations is consistently lower than human jury recommendations",
+      "Policymakers report decreased confidence in deliberative outcomes when AI enhancement is disclosed",
+      "Evidence of decreased citizen engagement in political processes following AI integration"
+    ],
+    "methodology": "Field studies with public acceptance surveys and policymaker interviews",
+    "variables": {
+      "independent": "Synthetic jury integration vs. traditional deliberation",
+      "dependent": "Democratic legitimacy measures and participation rates",
+      "control": "Policy domain and stakeholder characteristics"
+    }
+  },
+  {
+    "id": "meta-hypothesis-1",
+    "hypothesis": "The combination of validated individual AI moral reasoning (H1) and successful consensus formation (H2) will enable scalable democratic deliberation (H3) that enhances rather than replaces human democratic participation (H4)",
+    "type": "integrative",
+    "domain": "synthetic_deliberative_democracy",
+    "testable": true,
+    "dependencies": ["H1a", "H2a", "H3a", "H4a"],
+    "methodology": "Multi-phase validation with progressive integration testing"
+  },
+  {
+    "id": "theoretical-contribution",
+    "hypothesis": "Successful validation of synthetic deliberative democracy hypotheses will establish a new theoretical framework bridging AI ethics, political science, and moral psychology",
+    "type": "paradigm_shift",
+    "domain": "interdisciplinary_theory",
+    "testable": false,
+    "note": "This represents the broader theoretical impact rather than a directly testable hypothesis"
   }
 ]
