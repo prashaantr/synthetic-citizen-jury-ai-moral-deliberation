@@ -1,0 +1,14 @@
+[
+  {
+    "id": "example-experiment",
+    "title": "Example Experiment",
+    "experimentId": "exp-001",
+    "proposalId": "example-proposal",
+    "notesFiles": "notes/exp-001-notes.md",
+    "dataFiles": "data/exp-001-data.csv",
+    "codeFiles": "code/exp-001-code.py",
+    "resultsIssues": "issues/exp-001-results.md",
+    "resultsSummary": "Summary of results",
+    "_isExample": true
+  }
+]

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest version="0.1.0">
+
+    <!-- Required folders -->
+    <folder name="notes" required="true" section="none">
+      <description>Research notes and observations</description>
+        <folder name="sections" required="true">
+          <description>Current state and latest work for each research section</description>
+            <file name="concept.md" type="document" required="true" section="concept">
+              <description>Current state and latest work for the Concept section</description>
+            </file>
+            <file name="literature.md" type="document" required="false" section="literature">
+              <description>Current state and latest work for the Literature section</description>
+            </file>
+            <file name="hypothesis.md" type="document" required="false" section="hypothesis">
+              <description>Current state and latest work for the Hypothesis section</description>
+            </file>
+            <file name="data.md" type="document" required="false" section="data">
+              <description>Current state and latest work for the Data section</description>
+            </file>
+            <file name="proposal.md" type="document" required="false" section="proposal">
+              <description>Current state and latest work for the Proposal section</description>
+            </file>
+            <file name="experiment.md" type="document" required="false" section="experiment">
+              <description>Current state and latest work for the Experiment section</description>
+            </file>
+            <file name="analysis.md" type="document" required="false" section="analysis">
+              <description>Current state and latest work for the Analysis section</description>
+            </file>
+            <file name="paper.md" type="document" required="false" section="paper">
+              <description>Current state and latest work for the Paper section</description>
+            </file>
+        </folder>
+        <folder name="literature_review" required="true">
+          <description>Detailed literature review notes and materials</description>
+            <file name="README.md" type="document" required="true">
+              <description>Guide to organizing and structuring literature review materials</description>
+            </file>
+        </folder>
+        <file name="README.md" type="document" required="false">
+          <description>Overview of the notes folder structure and organization</description>
+        </file>
+    </folder>
+    <folder name="code" required="true" section="experiment,analysis">
+      <description>Analysis scripts and experiment implementations</description>
+        <file name="README.md" type="document" required="false">
+          <description>Guide to code organization, experiment structure, and analysis scripts</description>
+        </file>
+    </folder>
+    <folder name="data" required="true" section="data,experiment,analysis">
+      <description>Raw and processed data files</description>
+        <file name="README.md" type="document" required="false">
+          <description>Data organization guidelines, formats, and processing pipeline</description>
+        </file>
+    </folder>
+    <folder name=".cosci" required="true">
+      <description>CoSci system files for caching, pointers, and templates</description>
+        <file name="manifest.xml" type="config" required="true">
+          <description>Schema definition for project structure</description>
+        </file>
+    </folder>
+    <folder name=".git" required="true">
+      <description>Git version control</description>
+    </folder>
+    <folder name=".github" required="false">
+      <description>GitHub specific configurations</description>
+        <folder name="workflows" required="false">
+          <description>GitHub Actions workflows</description>
+            <file name="cosci.yml" type="config" required="false">
+              <description>Configuration for how AI agents are run in the project</description>
+            </file>
+        </folder>
+    </folder>
+    
+    <!-- Core data files -->
+    <file name="experiments.json" type="data" required="true" section="experiment" entryType="ExperimentEntry">
+      <description>Log of all experiments conducted</description>
+    </file>
+    <file name="papers.json" type="data" required="true" section="literature" entryType="PaperEntry">
+      <description>References and papers collected</description>
+    </file>
+    <file name="hypotheses.json" type="data" required="true" section="hypothesis" entryType="HypothesisEntry">
+      <description>Hypotheses generated</description>
+    </file>
+    <file name="analyses.json" type="data" required="true" section="analysis" entryType="AnalysisEntry">
+      <description>Analysis results and findings</description>
+    </file>
+    <file name="proposals.json" type="data" required="true" section="proposal" entryType="ProposalEntry">
+      <description>Experiment proposals and evaluation plans</description>
+    </file>
+    <file name="paper.tex" type="document" required="true" section="paper,proposal">
+      <description>Main manuscript in LaTeX format</description>
+    </file>
+    <file name="paper.sty" type="document" required="true" section="paper,proposal">
+      <description>Main manuscript LaTeX style file</description>
+    </file>
+    <file name="README.md" type="document" required="true">
+      <description>Project overview and documentation</description>
+    </file>
+    <file name="CLAUDE.md" type="document" required="true">
+      <description>AI assistant instructions and project context</description>
+    </file>
+
+</manifest>

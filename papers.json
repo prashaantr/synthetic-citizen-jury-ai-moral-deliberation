@@ -1,0 +1,17 @@
+[
+  {
+    "id": "example-paper",
+    "title": "Example Paper Title",
+    "authors": "Author One, Author Two",
+    "journal": "Journal Name",
+    "conference": "Conference Name",
+    "year": "2024",
+    "url": "https://example.com/paper.pdf",
+    "hypotheses": "Related hypothesis IDs or summary",
+    "notes": "Notes about the paper",
+    "strengths": "Key strengths",
+    "weaknesses": "Key weaknesses",
+    "citation": "Author, Title, Venue, Year",
+    "_isExample": true
+  }
+]

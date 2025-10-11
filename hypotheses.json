@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "hypothesis": "A large-scale synthetic citizen jury composed of AI agents trained on diverse moral frameworks can generate meaningful estimates of potential public consensus on policy issues that correlate significantly with real-world deliberative outcomes."
+  },
+  {
+    "id": "example-1",
+    "hypothesis": "This is an example hypothesis that demonstrates the expected format.",
+    "_isExample": true
+  }
+]

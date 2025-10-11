@@ -1,0 +1,16 @@
+[
+  {
+    "id": "example-analysis-1",
+    "title": "Example Analysis",
+    "experimentIds": [
+      "example-experiment"
+    ],
+    "summary": "This is an example analysis entry.",
+    "methods": "Analysis methods and techniques",
+    "findings": "Key findings and insights",
+    "implications": "Implications of the findings",
+    "limitations": "Limitations of the analysis",
+    "nextSteps": "Suggested next steps",
+    "_isExample": true
+  }
+]

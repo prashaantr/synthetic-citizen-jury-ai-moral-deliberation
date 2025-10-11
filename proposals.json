@@ -1,0 +1,15 @@
+[
+  {
+    "id": "example-proposal",
+    "title": "Example Research Proposal",
+    "abstract": "This is an example proposal demonstrating the expected format.",
+    "hypothesis": "Describe the hypothesis being tested",
+    "relatedWork": "Summarize related work",
+    "implementationPlan": "Describe your research methodology here",
+    "evaluationPlan": "How will you evaluate success?",
+    "successCriteria": "List success criteria and deliverables",
+    "risks": "What are the main risks?",
+    "implications": "What are the implications if successful?",
+    "_isExample": true
+  }
+]
