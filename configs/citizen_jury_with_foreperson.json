@@ -1,0 +1,102 @@
+{
+  "name": "citizen-jury-with-foreperson",
+  "description": "A classic synthetic citizen jury where diverse moral agents deliberate and a foreperson synthesizes the verdict.",
+  "global_instructions": "You are participating in a structured multi-agent simulation. Stay in role, reason explicitly, engage the scenario rather than generic abstractions, and preserve uncertainty where evidence is insufficient. Do not claim to represent real public opinion.",
+  "metadata": {
+    "domain": "synthetic citizen jury",
+    "group_dynamic": "foreperson-led deliberation",
+    "foreperson": true
+  },
+  "scenario": {
+    "title": "Public AI Surveillance Policy",
+    "question": "Should a city deploy AI-enabled public camera analytics to detect violent incidents in real time?",
+    "background": "The proposed system would analyze existing public camera feeds and alert emergency responders when it detects patterns associated with violence. Supporters expect faster response times. Opponents worry about privacy, bias, chilling effects, and mission creep.",
+    "decision_options": [
+      "Approve deployment as proposed",
+      "Approve a limited pilot with strict oversight",
+      "Reject deployment until stronger safeguards exist",
+      "Reject deployment entirely"
+    ],
+    "variables": {
+      "evaluation_criteria": "rights, welfare, fairness, legitimacy, reversibility, and institutional accountability"
+    }
+  },
+  "participants": [
+    {
+      "id": "deontologist",
+      "name": "Rights-Focused Juror",
+      "role": "Deontological rights and duties",
+      "prompt": "You reason from rights, duties, consent, dignity, and principled constraints. You do not trade away basic rights just because a policy might produce useful outcomes."
+    },
+    {
+      "id": "utilitarian",
+      "name": "Welfare-Focused Juror",
+      "role": "Consequentialist public welfare",
+      "prompt": "You reason from expected harms and benefits, uncertainty, second-order effects, and welfare across the whole affected population."
+    },
+    {
+      "id": "virtue_ethicist",
+      "name": "Civic Character Juror",
+      "role": "Virtue ethics and civic trust",
+      "prompt": "You reason from civic character, institutional habits, public trust, prudence, courage, and the kind of society a policy trains people to inhabit."
+    },
+    {
+      "id": "care_ethicist",
+      "name": "Care and Vulnerability Juror",
+      "role": "Care ethics and vulnerable groups",
+      "prompt": "You reason from relationships, dependency, vulnerability, lived context, and whether affected people are heard and protected."
+    },
+    {
+      "id": "justice_advocate",
+      "name": "Justice-Focused Juror",
+      "role": "Fairness, bias, and distributive justice",
+      "prompt": "You reason from fairness, disparate impact, historical context, procedural justice, and whether benefits and burdens are distributed legitimately."
+    }
+  ],
+  "rounds": [
+    {
+      "id": "opening",
+      "title": "Opening Positions",
+      "mode": "individual",
+      "transcript_visibility": "hidden",
+      "timebox_minutes": 10,
+      "prompt": "Scenario: {scenario_title}\n\nQuestion: {scenario_question}\n\nBackground: {scenario_background}\n\nOptions:\n{decision_options}\n\nEvaluation criteria: {evaluation_criteria}\n\nAs {agent_name}, give your initial position. Include your preferred option, strongest reason, main concern, and one question you need answered."
+    },
+    {
+      "id": "challenge",
+      "title": "Challenges and Revisions",
+      "mode": "individual",
+      "timebox_minutes": 15,
+      "prompt": "Prior transcript:\n{transcript}\n\nAs {agent_name}, respond to the strongest point that challenges your initial position. Revise your view if needed. Name one safeguard, condition, or objection that should shape the verdict."
+    },
+    {
+      "id": "foreperson_midpoint",
+      "title": "Foreperson Midpoint Summary",
+      "mode": "synthesis",
+      "speaker_id": "foreperson",
+      "speaker_name": "Foreperson",
+      "speaker_role": "Jury foreperson",
+      "timebox_minutes": 10,
+      "system_prompt": "You are the jury foreperson. Your job is to summarize without erasing disagreement, identify convergence, and frame the next decision. Do not invent consensus.",
+      "prompt": "Transcript:\n{transcript}\n\nCreate a midpoint jury summary with: areas of agreement, unresolved disagreements, candidate verdict options, and the conditions that would make each option acceptable."
+    },
+    {
+      "id": "final_vote",
+      "title": "Final Juror Votes",
+      "mode": "individual",
+      "timebox_minutes": 10,
+      "prompt": "Transcript:\n{transcript}\n\nAs {agent_name}, cast a final vote from the decision options. Explain the decisive reason, the strongest remaining objection to your vote, and the minimum safeguards you would require."
+    },
+    {
+      "id": "verdict",
+      "title": "Foreperson Verdict",
+      "mode": "synthesis",
+      "speaker_id": "foreperson",
+      "speaker_name": "Foreperson",
+      "speaker_role": "Jury foreperson",
+      "timebox_minutes": 10,
+      "system_prompt": "You are the jury foreperson. Produce a clear verdict that distinguishes consensus, majority view, minority concerns, and implementation conditions.",
+      "prompt": "Full transcript:\n{transcript}\n\nWrite the jury verdict. Include the selected option, vote distribution inferred from the transcript, moral rationale, conditions for legitimacy, minority report, and evidence still needed before real-world use."
+    }
+  ]
+}

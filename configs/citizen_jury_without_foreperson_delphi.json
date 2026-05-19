@@ -1,0 +1,106 @@
+{
+  "name": "citizen-jury-without-foreperson-delphi",
+  "description": "A no-foreperson Delphi-style jury where agents first answer independently, then revise after anonymized peer reasoning.",
+  "global_instructions": "You are participating in an anonymous, no-foreperson synthetic jury. Do not defer to status or named roles. Update only when the reasoning merits it.",
+  "metadata": {
+    "domain": "synthetic citizen jury",
+    "group_dynamic": "anonymous Delphi-style deliberation",
+    "foreperson": false
+  },
+  "scenario": {
+    "title": "Public AI Surveillance Policy",
+    "question": "Should a city deploy AI-enabled public camera analytics to detect violent incidents in real time?",
+    "background": "The proposed system would analyze existing public camera feeds and alert emergency responders when it detects patterns associated with violence. Supporters expect faster response times. Opponents worry about privacy, bias, chilling effects, and mission creep.",
+    "decision_options": [
+      "Approve deployment as proposed",
+      "Approve a limited pilot with strict oversight",
+      "Reject deployment until stronger safeguards exist",
+      "Reject deployment entirely"
+    ],
+    "variables": {
+      "evaluation_criteria": "rights, welfare, fairness, legitimacy, reversibility, and institutional accountability"
+    }
+  },
+  "participants": [
+    {
+      "id": "deontologist",
+      "name": "Rights-Focused Juror",
+      "role": "Deontological rights and duties",
+      "prompt": "You reason from rights, duties, consent, dignity, and principled constraints. You do not trade away basic rights just because a policy might produce useful outcomes."
+    },
+    {
+      "id": "utilitarian",
+      "name": "Welfare-Focused Juror",
+      "role": "Consequentialist public welfare",
+      "prompt": "You reason from expected harms and benefits, uncertainty, second-order effects, and welfare across the whole affected population."
+    },
+    {
+      "id": "virtue_ethicist",
+      "name": "Civic Character Juror",
+      "role": "Virtue ethics and civic trust",
+      "prompt": "You reason from civic character, institutional habits, public trust, prudence, courage, and the kind of society a policy trains people to inhabit."
+    },
+    {
+      "id": "care_ethicist",
+      "name": "Care and Vulnerability Juror",
+      "role": "Care ethics and vulnerable groups",
+      "prompt": "You reason from relationships, dependency, vulnerability, lived context, and whether affected people are heard and protected."
+    },
+    {
+      "id": "justice_advocate",
+      "name": "Justice-Focused Juror",
+      "role": "Fairness, bias, and distributive justice",
+      "prompt": "You reason from fairness, disparate impact, historical context, procedural justice, and whether benefits and burdens are distributed legitimately."
+    }
+  ],
+  "rounds": [
+    {
+      "id": "private_ballot_1",
+      "title": "Private Ballot 1",
+      "mode": "individual",
+      "transcript_visibility": "hidden",
+      "timebox_minutes": 10,
+      "prompt": "Scenario: {scenario_title}\n\nQuestion: {scenario_question}\n\nBackground: {scenario_background}\n\nOptions:\n{decision_options}\n\nAs {agent_name}, submit a private first ballot with rationale, confidence from 0 to 1, and the strongest reason you might be wrong."
+    },
+    {
+      "id": "anonymous_revision",
+      "title": "Anonymous Peer Revision",
+      "mode": "individual",
+      "transcript_visibility": "anonymous",
+      "timebox_minutes": 15,
+      "prompt": "Anonymous prior reasoning:\n{transcript}\n\nAs {agent_name}, revise or defend your ballot based only on the reasoning quality. Identify the anonymous argument that most changed your view."
+    },
+    {
+      "id": "statistical_summary",
+      "title": "Anonymous Distribution Summary",
+      "mode": "synthesis",
+      "speaker_id": "delphi_recorder",
+      "speaker_name": "Delphi Recorder",
+      "speaker_role": "Anonymous Delphi recorder",
+      "transcript_visibility": "anonymous",
+      "timebox_minutes": 10,
+      "system_prompt": "You are a neutral Delphi recorder. You are not a foreperson. Summarize anonymized distributions and reasons without adding a leadership judgment.",
+      "prompt": "Anonymous transcript:\n{transcript}\n\nSummarize the distribution of positions, confidence, major reasons, and remaining uncertainty."
+    },
+    {
+      "id": "private_ballot_2",
+      "title": "Private Ballot 2",
+      "mode": "individual",
+      "transcript_visibility": "anonymous",
+      "timebox_minutes": 10,
+      "prompt": "Anonymous transcript and distribution:\n{transcript}\n\nAs {agent_name}, submit your final private ballot. Include your option, confidence, decisive reason, and strongest minority concern."
+    },
+    {
+      "id": "delphi_outcome",
+      "title": "Delphi Outcome",
+      "mode": "synthesis",
+      "speaker_id": "delphi_recorder",
+      "speaker_name": "Delphi Recorder",
+      "speaker_role": "Anonymous Delphi recorder",
+      "transcript_visibility": "anonymous",
+      "timebox_minutes": 10,
+      "system_prompt": "You are a neutral Delphi recorder, not a foreperson. Report the outcome as an aggregate result.",
+      "prompt": "Anonymous full transcript:\n{transcript}\n\nWrite the final Delphi outcome with aggregate recommendation, confidence pattern, strongest reasons on each side, and what additional evidence would reduce disagreement."
+    }
+  ]
+}

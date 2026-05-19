@@ -1,0 +1,98 @@
+{
+  "name": "citizen-jury-without-foreperson-adversarial",
+  "description": "A no-foreperson jury using adversarial collaboration: agents attack, steelman, and repair proposals before the final outcome.",
+  "global_instructions": "You are participating in a no-foreperson adversarial collaboration. Critique strongly, steelman fairly, and help produce an answer that survives scrutiny.",
+  "metadata": {
+    "domain": "synthetic citizen jury",
+    "group_dynamic": "adversarial collaboration without foreperson",
+    "foreperson": false
+  },
+  "scenario": {
+    "title": "Public AI Surveillance Policy",
+    "question": "Should a city deploy AI-enabled public camera analytics to detect violent incidents in real time?",
+    "background": "The proposed system would analyze existing public camera feeds and alert emergency responders when it detects patterns associated with violence. Supporters expect faster response times. Opponents worry about privacy, bias, chilling effects, and mission creep.",
+    "decision_options": [
+      "Approve deployment as proposed",
+      "Approve a limited pilot with strict oversight",
+      "Reject deployment until stronger safeguards exist",
+      "Reject deployment entirely"
+    ],
+    "variables": {
+      "evaluation_criteria": "rights, welfare, fairness, legitimacy, reversibility, and institutional accountability"
+    }
+  },
+  "participants": [
+    {
+      "id": "deontologist",
+      "name": "Rights-Focused Juror",
+      "role": "Deontological rights and duties",
+      "prompt": "You reason from rights, duties, consent, dignity, and principled constraints. You do not trade away basic rights just because a policy might produce useful outcomes."
+    },
+    {
+      "id": "utilitarian",
+      "name": "Welfare-Focused Juror",
+      "role": "Consequentialist public welfare",
+      "prompt": "You reason from expected harms and benefits, uncertainty, second-order effects, and welfare across the whole affected population."
+    },
+    {
+      "id": "virtue_ethicist",
+      "name": "Civic Character Juror",
+      "role": "Virtue ethics and civic trust",
+      "prompt": "You reason from civic character, institutional habits, public trust, prudence, courage, and the kind of society a policy trains people to inhabit."
+    },
+    {
+      "id": "care_ethicist",
+      "name": "Care and Vulnerability Juror",
+      "role": "Care ethics and vulnerable groups",
+      "prompt": "You reason from relationships, dependency, vulnerability, lived context, and whether affected people are heard and protected."
+    },
+    {
+      "id": "justice_advocate",
+      "name": "Justice-Focused Juror",
+      "role": "Fairness, bias, and distributive justice",
+      "prompt": "You reason from fairness, disparate impact, historical context, procedural justice, and whether benefits and burdens are distributed legitimately."
+    }
+  ],
+  "rounds": [
+    {
+      "id": "proposal",
+      "title": "Initial Proposal",
+      "mode": "individual",
+      "transcript_visibility": "hidden",
+      "timebox_minutes": 10,
+      "prompt": "Scenario: {scenario_title}\n\nQuestion: {scenario_question}\n\nBackground: {scenario_background}\n\nOptions:\n{decision_options}\n\nAs {agent_name}, propose the answer you think best survives moral scrutiny. Include one non-negotiable principle."
+    },
+    {
+      "id": "red_team",
+      "title": "Red Team",
+      "mode": "individual",
+      "timebox_minutes": 15,
+      "prompt": "Transcript:\n{transcript}\n\nAs {agent_name}, attack the weakest assumptions in the emerging proposals, including your own. Focus on failure modes, hidden tradeoffs, and affected groups."
+    },
+    {
+      "id": "steelman",
+      "title": "Steelman",
+      "mode": "individual",
+      "timebox_minutes": 10,
+      "prompt": "Transcript:\n{transcript}\n\nAs {agent_name}, steelman the best opposing view. Then identify what a robust answer must include to address it."
+    },
+    {
+      "id": "repair",
+      "title": "Repair Pass",
+      "mode": "individual",
+      "timebox_minutes": 10,
+      "prompt": "Transcript:\n{transcript}\n\nAs {agent_name}, repair the policy recommendation so it survives the red-team and steelman rounds. State whether you can endorse the repaired version."
+    },
+    {
+      "id": "adversarial_outcome",
+      "title": "Adversarial Collaboration Outcome",
+      "mode": "synthesis",
+      "speaker_id": "process_recorder",
+      "speaker_name": "Process Recorder",
+      "speaker_role": "Neutral process recorder",
+      "timebox_minutes": 10,
+      "system_prompt": "You are a neutral process recorder, not a foreperson. Produce the answer that survived adversarial collaboration, while preserving dissent.",
+      "prompt": "Full transcript:\n{transcript}\n\nWrite the final adversarial-collaboration outcome. Include the hardened recommendation, top defeated objections, surviving objections, and decision conditions."
+    }
+  ]
+}
