@@ -11,14 +11,14 @@
 
 ## Research Hypothesis and Novel Approach
 
-**Central Hypothesis**: Synthetic citizen juries composed of AI agents trained on diverse ethical frameworks can generate morally coherent policy recommendations that approximate human deliberative democracy while revealing patterns of moral reasoning inaccessible through traditional methods.
+**Central Hypothesis**: Synthetic citizen juries composed of AI agents prompt-configured around diverse ethical frameworks can generate morally coherent policy recommendations that approximate human deliberative democracy while revealing patterns of moral reasoning inaccessible through traditional methods.
 
 **Key Assumptions Being Challenged**:
 - Prior assumption: AI systems cannot engage in authentic moral reasoning beyond pattern matching
 - Prior assumption: Democratic deliberation requires human consciousness and lived experience
 - Prior assumption: Scaling deliberative processes necessarily compromises depth of moral reasoning
 
-**Novel Methodological Insight**: Instead of training AI to mimic human moral outputs, we train agents to embody distinct moral *frameworks* (deontological, consequentialist, virtue ethics, care ethics, etc.) and observe emergent consensus through structured deliberation protocols.
+**Novel Methodological Insight**: Instead of asking one model to mimic human moral outputs, we configure agents to embody distinct moral *frameworks* (deontological, consequentialist, virtue ethics, care ethics, etc.) and observe emergent consensus through structured deliberation protocols.
 
 ## Research Objectives and Key Questions
 
@@ -39,7 +39,7 @@
 ### Core Innovation: Multi-Agent Moral Deliberation Architecture
 - **Agent Design**: Each agent embodies a specific ethical framework with consistent moral reasoning patterns
 - **Deliberation Protocol**: Structured debate format incorporating moral argumentation, evidence evaluation, and preference updating
-- **Scale Dynamics**: Thousands of agents enable statistical analysis of moral convergence patterns
+- **Scale Dynamics**: Configurable agent groups enable comparison of moral convergence patterns across protocol designs before any larger-scale study
 - **Validation Framework**: Comparative analysis against human citizen jury outcomes and philosophical consistency checks
 
 ### Expected Evidence Standards:

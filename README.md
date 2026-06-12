@@ -1,8 +1,10 @@
-# Agent Simulation Lab
+# Synthetic Citizen Jury for AI Moral Deliberation
 
-A small Python framework for running prompt-configured multi-agent simulations.
+A Python framework for running prompt-configured multi-agent deliberation simulations.
 
-The original research project, **Synthetic Citizen Jury AI for Moral Deliberation**, remains available through citizen-jury presets. The implementation has been generalized so the same runner can simulate other groups as well: hackathon teams, Delphi panels, adversarial reviewers, consensus groups, or any custom agent workflow defined in JSON.
+The original research project remains available through citizen-jury presets. The implementation has been generalized so the same runner can simulate other groups as well: hackathon teams, Delphi panels, adversarial reviewers, consensus groups, or any custom agent workflow defined in JSON.
+
+The repository includes model-backed sample runs comparing four citizen-jury protocols on the same public AI surveillance question: foreperson-led deliberation, leaderless consensus, anonymous Delphi revision, and adversarial collaboration.
 
 This repository was originally created with [Co-Sci](https://co-sci.org).
 
@@ -22,13 +24,7 @@ git clone https://github.com/prashaantr/synthetic-citizen-jury-ai-moral-delibera
 cd synthetic-citizen-jury-ai-moral-deliberation
 ```
 
-Run without installing anything:
-
-```bash
-PYTHONPATH=code python3 -m agent_simulation --list-presets
-```
-
-List available presets:
+List available presets without installing anything:
 
 ```bash
 PYTHONPATH=code python3 -m agent_simulation --list-presets
@@ -95,6 +91,19 @@ PYTHONPATH=code python3 -m agent_simulation configs/hackathon_one_hour.json \
 | `configs/citizen_jury_without_foreperson_delphi.json` | Anonymous Delphi-style process with private ballots and anonymized revision. |
 | `configs/citizen_jury_without_foreperson_adversarial.json` | No-foreperson adversarial collaboration with critique, steelman, and repair rounds. |
 | `configs/hackathon_one_hour.json` | Time-boxed peer group that accepts a challenge prompt, deliberates, handles interruptions, and produces one final answer. |
+
+## Model-Backed Sample Results
+
+A June 12, 2026 comparison run is committed under [`results/`](results/). All four runs use `gpt-4o-mini` through the OpenAI provider and the same scenario: "Should a city deploy AI-enabled public camera analytics to detect violent incidents in real time?"
+
+| Protocol | Transcript | Final outcome |
+| --- | --- | --- |
+| Foreperson-led jury | [`results/citizen-jury-with-foreperson-2026-06-12-2011125397780000.md`](results/citizen-jury-with-foreperson-2026-06-12-2011125397780000.md) | Limited pilot with strict oversight; rights-focused minority objection preserved. |
+| Leaderless consensus | [`results/citizen-jury-without-foreperson-consensus-2026-06-12-2012333413010000.md`](results/citizen-jury-without-foreperson-consensus-2026-06-12-2012333413010000.md) | Limited pilot with community engagement, audits, and enforceable safeguards. |
+| Anonymous Delphi | [`results/citizen-jury-without-foreperson-delphi-2026-06-12-2013439087810000.md`](results/citizen-jury-without-foreperson-delphi-2026-06-12-2013439087810000.md) | Rejected deployment until stronger safeguards exist. |
+| Adversarial collaboration | [`results/citizen-jury-without-foreperson-adversarial-2026-06-12-2021098125990000.md`](results/citizen-jury-without-foreperson-adversarial-2026-06-12-2021098125990000.md) | Hardened limited-pilot recommendation with stronger scope limits, oversight, and bias controls. |
+
+The sample result is not a benchmark claim. It is an auditable demonstration that the same agent roles and policy question can produce different recommendations under different deliberation structures.
 
 ## Hackathon Preset
 
@@ -360,6 +369,8 @@ Each run writes two files under `runs/` unless `--output-dir` is set:
 
 The output records provider, model, scenario, round settings, participant roles, generated messages, and run metadata.
 
+Committed model-backed citizen-jury examples live in [`results/`](results/).
+
 ## Testing
 
 Run the unit tests:
@@ -402,6 +413,7 @@ done
 │   │   └── schema.py       # config/result dataclasses and validation
 │   └── run_simulation.py
 ├── configs/                # reusable simulation presets
+├── results/                # committed model-backed sample runs
 ├── tests/                  # unit tests
 ├── notes/                  # research notes
 ├── data/                   # data files

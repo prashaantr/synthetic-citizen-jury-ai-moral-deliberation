@@ -1,7 +1,7 @@
 [
   {
     "id": "H1a",
-    "hypothesis": "AI agents trained to embody distinct ethical frameworks can generate morally coherent arguments that are philosophically indistinguishable from human arguments representing the same frameworks when evaluated by expert philosophers",
+    "hypothesis": "AI agents prompt-configured to embody distinct ethical frameworks can generate morally coherent arguments that are philosophically indistinguishable from human arguments representing the same frameworks when evaluated by expert philosophers",
     "null_hypothesis": "AI-generated moral arguments will be significantly distinguishable from human-generated arguments representing equivalent ethical frameworks when evaluated by expert philosophers",
     "alternative_hypothesis": "AI agents can authentically embody moral frameworks with sufficient fidelity to pass philosophical evaluation",
     "type": "authenticity",

@@ -8,16 +8,16 @@ This section presents the refined research hypotheses based on our comprehensive
 
 ### H1: Authenticity of AI Moral Reasoning
 
-**Primary Hypothesis (H1a)**: AI agents trained to embody distinct ethical frameworks (deontological, consequentialist, virtue ethics, care ethics) can generate morally coherent arguments that are philosophically indistinguishable from human arguments representing the same frameworks when evaluated by expert philosophers.
+**Primary Hypothesis (H1a)**: AI agents prompt-configured to embody distinct ethical frameworks (deontological, consequentialist, virtue ethics, care ethics) can generate morally coherent arguments that are philosophically indistinguishable from human arguments representing the same frameworks when evaluated by expert philosophers.
 
-**Null Hypothesis (H1aÄ)**: AI-generated moral arguments will be significantly distinguishable from human-generated arguments representing equivalent ethical frameworks when evaluated by expert philosophers.
+**Null Hypothesis (H1a0)**: AI-generated moral arguments will be significantly distinguishable from human-generated arguments representing equivalent ethical frameworks when evaluated by expert philosophers.
 
-**Alternative Hypothesis (H1aÅ)**: AI agents can authentically embody moral frameworks with sufficient fidelity to pass philosophical evaluation.
+**Alternative Hypothesis (H1a1)**: AI agents can authentically embody moral frameworks with sufficient fidelity to pass philosophical evaluation.
 
 **Underlying Assumptions**:
 - Moral reasoning can be operationalized through consistent application of ethical principles
 - Expert philosophers can reliably distinguish authentic from inauthentic moral argumentation
-- Training on philosophical texts and examples can instill genuine moral reasoning patterns in AI systems
+- Prompting and configuration around philosophical texts and examples can elicit consistent moral reasoning patterns in AI systems
 
 **Falsification Criteria**: 
 - Expert philosophers can correctly identify AI vs. human arguments >70% of the time
@@ -28,9 +28,9 @@ This section presents the refined research hypotheses based on our comprehensive
 
 **Primary Hypothesis (H2a)**: Large-scale synthetic citizen juries (n>1000 agents) will demonstrate emergent moral consensus patterns that correlate significantly (r>0.7) with outcomes from matched human citizen juries on equivalent moral dilemmas.
 
-**Null Hypothesis (H2aÄ)**: There is no significant correlation between synthetic and human citizen jury outcomes on moral policy questions.
+**Null Hypothesis (H2a0)**: There is no significant correlation between synthetic and human citizen jury outcomes on moral policy questions.
 
-**Alternative Hypothesis (H2aÅ)**: Synthetic deliberation produces consensus patterns that approximate human deliberative democracy outcomes.
+**Alternative Hypothesis (H2a1)**: Synthetic deliberation produces consensus patterns that approximate human deliberative democracy outcomes.
 
 **Underlying Assumptions**:
 - Human citizen juries produce reliable, measurable consensus patterns
@@ -46,9 +46,9 @@ This section presents the refined research hypotheses based on our comprehensive
 
 **Primary Hypothesis (H3a)**: Synthetic citizen juries reveal moral reasoning patterns and consensus dynamics at population scales (n>10,000) that are inaccessible through traditional deliberative methods, providing novel insights into collective moral judgment.
 
-**Null Hypothesis (H3aÄ)**: Large-scale synthetic deliberation provides no additional insights beyond those available from smaller human deliberative groups.
+**Null Hypothesis (H3a0)**: Large-scale synthetic deliberation provides no additional insights beyond those available from smaller human deliberative groups.
 
-**Alternative Hypothesis (H3aÅ)**: Population-scale synthetic deliberation reveals emergent properties of moral reasoning not observable in smaller groups.
+**Alternative Hypothesis (H3a1)**: Population-scale synthetic deliberation reveals emergent properties of moral reasoning not observable in smaller groups.
 
 **Underlying Assumptions**:
 - Moral reasoning exhibits scale-dependent emergent properties
@@ -64,9 +64,9 @@ This section presents the refined research hypotheses based on our comprehensive
 
 **Primary Hypothesis (H4a)**: Synthetic citizen juries function as effective democratic enhancement tools that increase the quality and reach of public deliberation without displacing human agency in democratic decision-making.
 
-**Null Hypothesis (H4aÄ)**: Synthetic citizen juries either fail to enhance democratic processes or actively undermine human democratic participation.
+**Null Hypothesis (H4a0)**: Synthetic citizen juries either fail to enhance democratic processes or actively undermine human democratic participation.
 
-**Alternative Hypothesis (H4aÅ)**: Synthetic deliberation enhances democratic capacity while preserving human sovereignty over moral and political decisions.
+**Alternative Hypothesis (H4a1)**: Synthetic deliberation enhances democratic capacity while preserving human sovereignty over moral and political decisions.
 
 **Underlying Assumptions**:
 - Democratic legitimacy depends on meaningful human participation in deliberative processes
@@ -84,7 +84,7 @@ This section presents the refined research hypotheses based on our comprehensive
 
 These hypotheses build on and challenge several theoretical foundations:
 
-**Deliberative Democracy Theory**: Our hypotheses test whether the core principles of deliberative democracyreasoned argument, mutual respect, and consensus formationcan be preserved and enhanced through AI integration.
+**Deliberative Democracy Theory**: Our hypotheses test whether the core principles of deliberative democracy - reasoned argument, mutual respect, and consensus formation - can be preserved and enhanced through AI integration.
 
 **Moral Psychology**: We challenge the assumption that authentic moral reasoning requires human consciousness and lived experience, proposing instead that moral frameworks can be computationally embodied.
 
