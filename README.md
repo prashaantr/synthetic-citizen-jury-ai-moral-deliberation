@@ -405,7 +405,6 @@ done
 ├── tests/                  # unit tests
 ├── notes/                  # research notes
 ├── data/                   # data files
-├── paper.tex               # manuscript draft
 └── README.md
 ```
 
@@ -414,10 +413,9 @@ done
 The original research materials are still present:
 
 - `notes/sections/concept.md`
+- `notes/sections/hypothesis.md`
+- `notes/sections/literature.md`
 - `hypotheses.json`
 - `papers.json`
-- `proposals.json`
-- `analyses.json`
-- `paper.tex`
 
 Those files describe the synthetic citizen-jury research agenda. The new engine makes it easier to run repeatable experiments across different deliberation protocols.
